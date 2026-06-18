@@ -79,12 +79,13 @@ p {
     object-fit: contain;
 }
 
-/* About Section */
+/* Shared */
 .title-header {
     align-self: flex-start;
     margin-bottom: 1rem;
     text-align: left;
 }
+/* About Section */
 .about-container {
     width: 80%;
     margin-left: auto;
@@ -94,9 +95,64 @@ p {
     flex-direction: column;
     margin-bottom: 5%;
 }
+
 .about-container p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #333;
     margin-bottom: 1rem;
+}
+/* Experience Section */
+.experience-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+.experience-timeline {
+    margin-left: 15%;
+}
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.timeline-item {
+    display: flex;
+    flex-direction: row;
+}
+.timeline-opposite {
+    width: 150px;
+    min-width: 150px;
+    text-align: right;
+    padding-right: 1rem;
+    padding-top: 2px;
+}
+.timeline-separator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #bdbdbd;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+.timeline-connector {
+    width: 2px;
+    background: #bdbdbd;
+    flex-grow: 1;
+    min-height: 150px;
+}
+.timeline-content {
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+    text-align: left;
 }
