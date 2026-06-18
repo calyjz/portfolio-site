@@ -31,5 +31,42 @@
         </div>
     </div>
 
+    <!-- About Section -->
+    <div class="about-container">
+        <div class="title-header">
+            <h3>━━ About</h3>
+        </div>
+        {% for paragraph in about %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+    </div>
+
+    <!-- Experience Section -->
+    <div class="experience-container">
+        <div class="title-header">
+            <h3>━━ Experience</h3>
+        </div>
+        <div class="experience-timeline">
+            <ul class="timeline">
+                {% for exp in experience %}
+                <li class="timeline-item">
+                    <div class="timeline-opposite">
+                        <h4>{{ exp.start }}</h4>
+                    </div>
+                    <div class="timeline-separator">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>{{ exp.company }}</h4>
+                        <p><b>{{ exp.title }}</b></p>
+                        <p>{{ exp.description }}</p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
 </body>
 </html>
