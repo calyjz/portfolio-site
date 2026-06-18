@@ -5,6 +5,11 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
+about = [
+    "Hi there! I am a fourth year CS student at the University of Alberta. I'm currently interning at AWS, working on ETL pipelines for query optimization. I also interned at AWS last summer, where I modernized backup workflows for critical RDS databases, gaining hands on experience with backend development, cloud infrastructure, and devops.",
+    "My interests revolve around site reliability engineering, backend development, cloud computing and distributed systems. I am always looking for new challenges that will use and deepen my knowledge and skillsets.",
+]
+
 experience = [
     {
         "company": "Amazon Web Services",
@@ -88,4 +93,4 @@ projects = [
 @app.route('/')
 def index():
     return render_template('index.html', title="Caly Zheng", url=os.getenv("URL"),
-                           experience=experience, projects=projects)
+                           about=about, experience=experience, projects=projects)
