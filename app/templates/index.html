@@ -31,5 +31,15 @@
         </div>
     </div>
 
+    <!-- About Section -->
+    <div class="about-container">
+        <div class="title-header">
+            <h3>━━ About</h3>
+        </div>
+        {% for paragraph in about %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+    </div>
+
 </body>
 </html>
