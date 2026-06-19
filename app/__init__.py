@@ -99,7 +99,33 @@ projects = [
 ]
 
 
+hobbies = [
+    {
+        "name": "Soccer",
+        "description": "I play casually and referee for Alberta Youth Soccer.",
+        "image": "soccer.webp"
+    },
+    {
+        "name": "Crocheting",
+        "description": "I love bringing ideas to life stitch by stitch especially for handmade gifts.",
+        "image": "crochet.webp"
+    },
+    {
+        "name": "Photography",
+        "description": "Learning to capture moments with my new digital camera.",
+        "image": "photography.png"
+    }
+]
+
+
 @app.route('/')
 def index():
     return render_template('index.html', title="Caly Zheng", url=os.getenv("URL"),
-                           about=about, education=education, experience=experience, projects=projects)
+                           about=about, education=education, experience=experience,
+                           projects=projects, hobbies=hobbies)
+
+
+@app.route('/hobbies')
+def hobbies_page():
+    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"),
+                           hobbies=hobbies)
