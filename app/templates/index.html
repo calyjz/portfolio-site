@@ -41,6 +41,33 @@
         {% endfor %}
     </div>
 
+    <!-- Education Section -->
+    <div class="education-container">
+        <div class="title-header">
+            <h3>━━ Education</h3>
+        </div>
+        <div class="education-timeline">
+            <ul class="timeline">
+                {% for edu in education %}
+                <li class="timeline-item">
+                    <div class="timeline-opposite">
+                        <h4>{{ edu.start }}</h4>
+                    </div>
+                    <div class="timeline-separator">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>{{ edu.institution }}</h4>
+                        <p><b>{{ edu.degree }}</b></p>
+                        <p>{{ edu.description }}</p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
     <!-- Experience Section -->
     <div class="experience-container">
         <div class="title-header">
