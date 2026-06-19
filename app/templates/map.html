@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<div class="map-page-container">
+    <div class="title-header">
+        <h3>━━ Places I've Been</h3>
+    </div>
+    <div id="map"></div>
+</div>
+
+
+</div>
+
+<script>
+    const map = L.map('map').setView([30, 10], 2);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const locations = {{ locations_json | safe }};
+
+    locations.forEach(loc => {
+        L.marker([loc.lat, loc.lng])
+            .addTo(map)
+            .bindTooltip(loc.city, { permanent: false, direction: 'top' });
+    });
+</script>
+
+{% endblock %}
