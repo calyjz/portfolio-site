@@ -102,6 +102,20 @@ p {
     color: #333;
     margin-bottom: 1rem;
 }
+/* Education Section */
+.education-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+.education-timeline {
+    margin-left: 15%;
+}
+
 /* Experience Section */
 .experience-container {
     width: 80%;

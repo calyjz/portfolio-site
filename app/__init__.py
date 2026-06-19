@@ -10,6 +10,15 @@ about = [
     "My interests revolve around site reliability engineering, backend development, cloud computing and distributed systems. I am always looking for new challenges that will use and deepen my knowledge and skillsets.",
 ]
 
+education = [
+    {
+        "institution": "University of Alberta",
+        "start": "Sept 2022",
+        "degree": "Bachelor of Science, Computing Science",
+        "description": "Expected graduation 2026"
+    }
+]
+
 experience = [
     {
         "company": "Amazon Web Services",
@@ -93,4 +102,4 @@ projects = [
 @app.route('/')
 def index():
     return render_template('index.html', title="Caly Zheng", url=os.getenv("URL"),
-                           about=about, experience=experience, projects=projects)
+                           about=about, education=education, experience=experience, projects=projects)
