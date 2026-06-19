@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:url" content="{{ url }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+
+    <div class="hobbies-page-container">
+        <a href="/" class="back-link">← Back</a>
+
+        <div class="title-header">
+            <h3>━━ Hobbies</h3>
+        </div>
+
+        <div class="hobby-cards-container">
+            {% for hobby in hobbies %}
+            <div class="hobby-card">
+                {% if hobby.image %}
+                <img src="/static/img/hobbies/{{ hobby.image }}" alt="{{ hobby.name }}">
+                {% endif %}
+                <h4>{{ hobby.name }}</h4>
+                <p>{{ hobby.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
