@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -116,6 +116,16 @@ hobbies = [
         "image": "photography.png"
     }
 ]
+
+
+@app.context_processor
+def inject_nav():
+    return {
+        'nav_pages': [
+            {'name': 'Home', 'url': url_for('index'), 'icon': 'fa-solid fa-house'},
+            {'name': 'Hobbies', 'url': url_for('hobbies_page'), 'icon': 'fa-solid fa-heart'},
+        ]
+    }
 
 
 @app.route('/')
