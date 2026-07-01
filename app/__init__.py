@@ -16,7 +16,7 @@ education = [
         "institution": "University of Alberta",
         "start": "Sept 2022",
         "degree": "Bachelor of Science, Computing Science",
-        "description": "Expected graduation 2026"
+        "description": "Expected graduation 2027"
     }
 ]
 
@@ -25,7 +25,7 @@ experience = [
         "company": "Amazon Web Services",
         "start": "May 2026",
         "title": "Software Development Engineer Intern",
-        "description": "Incoming summer 2026"
+        "description": "Developing S3Tables Datalake with ETL pipelines to optimize query performance"
     },
     {
         "company": "Amazon Web Services",
