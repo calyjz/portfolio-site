@@ -170,6 +170,7 @@ def inject_nav():
             {'name': 'Home', 'url': url_for('index'), 'icon': 'fa-solid fa-house'},
             {'name': 'Hobbies', 'url': url_for('hobbies_page'), 'icon': 'fa-solid fa-heart'},
             {'name': 'Map', 'url': url_for('map_page'), 'icon': 'fa-solid fa-earth-americas'},
+            {'name': 'Timeline', 'url': url_for('timeline_page'), 'icon': 'fa-solid fa-clock-rotate-left'},
         ]
     }
 
@@ -191,6 +192,10 @@ def map_page():
 def hobbies_page():
     return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"),
                            hobbies=hobbies)
+
+@app.route('/timeline')
+def timeline_page():
+    return render_template('timeline.html', title="Timeline")
 
 
 @app.route('/api/timeline_post', methods=[ 'POST' ])
