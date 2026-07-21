@@ -36,6 +36,17 @@ class TimelinePost(Model):
 mydb.connect()
 mydb.create_tables([TimelinePost])
 
+
+@app.before_request
+def _db_connect():
+    mydb.connect(reuse_if_open=True)
+
+
+@app.teardown_request
+def _db_close(exc):
+    if not mydb.is_closed():
+        mydb.close()
+
 about = [
     "Hi there! I am a fourth year CS student at the University of Alberta. I'm currently interning at AWS, working on ETL pipelines for query optimization. I also interned at AWS last summer, where I modernized backup workflows for critical RDS databases, gaining hands on experience with backend development, cloud infrastructure, and devops.",
     "My interests revolve around site reliability engineering, backend development, cloud computing and distributed systems. I am always looking for new challenges that will use and deepen my knowledge and skillsets.",
