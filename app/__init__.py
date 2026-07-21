@@ -144,7 +144,7 @@ projects = [
 hobbies = [
     {
         "name": "Soccer",
-        "description": "I play casually and referee for Alberta Youth Soccer.",
+        "description": "I play casually and referee for Alberta Soccer.",
         "image": "soccer.webp"
     },
     {
