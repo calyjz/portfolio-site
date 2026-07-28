@@ -44,6 +44,8 @@ def _db_connect():
 
 @app.teardown_request
 def _db_close(exc):
+    if os.getenv("TESTING") == "true":
+        return
     if not mydb.is_closed():
         mydb.close()
 
