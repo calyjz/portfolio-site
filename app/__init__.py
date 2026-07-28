@@ -59,7 +59,7 @@ education = [
         "institution": "University of Alberta",
         "start": "Sept 2022",
         "degree": "Bachelor of Science, Computing Science",
-        "description": "Expected graduation 2027"
+        "description": "Expected Graduation June 2027"
     }
 ]
 
