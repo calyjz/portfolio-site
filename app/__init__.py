@@ -147,7 +147,7 @@ hobbies = [
     {
         "name": "Soccer",
         "description": "I play casually and referee for Alberta Soccer.",
-        "image": "soccer.webp"
+        "image": "soccer.png"
     },
     {
         "name": "Crocheting",
