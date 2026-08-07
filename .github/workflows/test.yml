@@ -23,7 +23,7 @@ jobs:
           python-version: '3.9.25'
       
       - name: Install Dependencies
-        run: python3-virtualenv/bin/pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run Tests
         run: ./run_test.sh
