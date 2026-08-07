@@ -152,7 +152,7 @@ hobbies = [
     {
         "name": "Crocheting",
         "description": "I love bringing ideas to life stitch by stitch especially for handmade gifts.",
-        "image": "crochet.webp"
+        "image": "crochet.png"
     },
     {
         "name": "Photography",
