@@ -31,9 +31,8 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_IP: ${{ secrets.SSH_IP }}
       
-      - name: Print project root directory
-        run: ssh my-vps 'cd ${{ secrets.PROJECT_ROOT }} && pwd'
+      - name: Deploy site
+        run: ssh my-vps '~/redeploy-site.sh'
 
       - name: Send notification
         run: 'curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"'
-
