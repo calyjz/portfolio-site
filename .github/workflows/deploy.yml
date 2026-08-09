@@ -1,10 +1,13 @@
 name: Deploy
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Run Tests"]     # must match test.yml's `name:` field exactly
+    types:
+      - completed
     branches:
-      -main
-    workflow_dispatch:
+      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -30,3 +33,7 @@ jobs:
       
       - name: Print project root directory
         run: ssh my-vps 'cd ${{ secrets.PROJECT_ROOT }} && pwd'
+
+      - name: Send notification
+        run: 'curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"'
+
